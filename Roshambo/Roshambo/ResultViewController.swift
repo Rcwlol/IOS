@@ -11,8 +11,10 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    @IBOutlet var resultImage: UIImageView!
-    @IBOutlet var resultLabel: UILabel!
+  
+    @IBOutlet weak var resultImage2: UIImageView!
+
+    @IBOutlet weak var resultLabel2: UILabel!
     var won: Bool!
     var winCase: Int!
     
@@ -20,28 +22,28 @@ class ResultViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         if (self.won != false && self.won != nil ) {
-            self.resultLabel.text = "You Won!"
+            self.resultLabel2.text = "You Won!"
         } else if (self.won != true && self.won != nil){
-            self.resultLabel.text = "You Lost!"
+            self.resultLabel2.text = "You Lost!"
         }else{
-            self.resultLabel.text = "You Tied!"
+            self.resultLabel2.text = "You Tied!"
         }
         
         // The dice will only appear if firstValue and secondValue have been set
         if self.winCase==1{
-            self.resultImage.image = UIImage(named: "rockWins")
-            self.resultLabel.text = self.resultLabel.text! + " Rock crushes scissor"
+            self.resultImage2.image = UIImage(named: "rockWins")
+            self.resultLabel2.text = self.resultLabel2.text! + " Rock crushes scissor"
         } else if self.winCase==2{
-            self.resultImage.image = UIImage(named: "paperWins")
-            self.resultLabel.text = self.resultLabel.text! + " Paper covers rock"
+            self.resultImage2.image = UIImage(named: "paperWins")
+            self.resultLabel2.text = self.resultLabel2.text! + " Paper covers rock"
         }else if self.winCase==3{
-            self.resultImage.image = UIImage(named: "scissorWins")
-            self.resultLabel.text = self.resultLabel.text! + " Scissor cuts paper"
+            self.resultImage2.image = UIImage(named: "scissorWins")
+            self.resultLabel2.text = self.resultLabel2.text! + " Scissor cuts paper"
         }else {
-            self.resultImage.image = UIImage(named: "tieGame")
+            self.resultImage2.image = UIImage(named: "tieGame")
         }
         
-        self.resultImage.alpha = 0
+        self.resultImage2.alpha = 0
         
         
         
@@ -50,7 +52,7 @@ class ResultViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         
         UIView.animateWithDuration(0.3) {
-            self.resultImage.alpha = 1
+            self.resultImage2.alpha = 1
             
         }
     }
