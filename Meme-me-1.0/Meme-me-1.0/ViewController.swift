@@ -9,7 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
-    
+    struct Meme {
+        var topText: String!
+        var image: UIImage!
+        var botText: String!
+        var memedImage: UIImage!
+        
+
+    }
+    var memes: [Meme]!
     @IBOutlet weak var camButton: UIBarButtonItem!
     @IBOutlet weak var imagePicked: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
@@ -102,6 +110,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func save() {
+        //Create the meme
+        var meme = Meme( topText: topTextField.text!, image:
+            imagePicked.image, botText: botTextField.text!, memedImage: self.generateMemedImage())
+        
+    }
+    func generateMemedImage() -> UIImage{
+    // Render view to an image
+    UIGraphicsBeginImageContext(self.view.frame.size)
+    view.drawViewHierarchyInRect(self.view.frame,
+    afterScreenUpdates: true)
+    let memedImage : UIImage =
+    UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    
+    return memedImage
     }
 
 
