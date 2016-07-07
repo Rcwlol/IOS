@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meme_me_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVJ-cH-sLJ">
+                                <rect key="frame" x="0.0" y="548" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="CRs-Yr-3kT">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="0G5-je-8d3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNo-P6-tBW">
+                                <rect key="frame" x="180" y="209" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AVJ-cH-sLJ" secondAttribute="bottom" constant="8" id="4JP-0e-cVZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AVJ-cH-sLJ" secondAttribute="trailing" constant="-20" id="JtA-eM-3l1"/>
+                            <constraint firstItem="AVJ-cH-sLJ" firstAttribute="top" secondItem="gNo-P6-tBW" secondAttribute="bottom" constant="311" id="ZAF-GW-iXc"/>
+                            <constraint firstItem="AVJ-cH-sLJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="bX1-6o-q07"/>
+                            <constraint firstItem="gNo-P6-tBW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="2:5" id="dj0-UX-x9R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagePicked" destination="gNo-P6-tBW" id="Uxj-uW-ops"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
