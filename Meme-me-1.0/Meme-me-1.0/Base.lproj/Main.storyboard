@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,35 +18,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVJ-cH-sLJ">
-                                <rect key="frame" x="0.0" y="548" width="600" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNo-P6-tBW">
+                                <rect key="frame" x="180" y="209" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="dqM-k6-rYI"/>
+                                    <constraint firstAttribute="width" secondItem="gNo-P6-tBW" secondAttribute="height" multiplier="15:8" id="gqp-5S-jdg"/>
+                                </constraints>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVJ-cH-sLJ">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" id="CRs-Yr-3kT">
+                                    <barButtonItem title="Album" width="261" id="CRs-Yr-3kT">
                                         <connections>
-                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="0G5-je-8d3"/>
+                                            <action selector="pickAnImageAlbum:" destination="BYZ-38-t0r" id="TIO-HH-pT2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="camButton" id="HI0-tu-Yq4" userLabel="camButton">
+                                        <connections>
+                                            <action selector="pickImageCam:" destination="BYZ-38-t0r" id="Qq2-4T-hHg"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNo-P6-tBW">
-                                <rect key="frame" x="180" y="209" width="240" height="128"/>
-                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ksj-XA-xSN">
+                                <rect key="frame" x="252" y="465" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bNM-r9-VbG">
+                                <rect key="frame" x="252" y="66" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AVJ-cH-sLJ" secondAttribute="bottom" constant="8" id="4JP-0e-cVZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AVJ-cH-sLJ" secondAttribute="trailing" constant="-20" id="JtA-eM-3l1"/>
-                            <constraint firstItem="AVJ-cH-sLJ" firstAttribute="top" secondItem="gNo-P6-tBW" secondAttribute="bottom" constant="311" id="ZAF-GW-iXc"/>
-                            <constraint firstItem="AVJ-cH-sLJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="bX1-6o-q07"/>
-                            <constraint firstItem="gNo-P6-tBW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="2:5" id="dj0-UX-x9R"/>
+                            <constraint firstItem="gNo-P6-tBW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1NK-4A-Ngo"/>
+                            <constraint firstItem="gNo-P6-tBW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FTA-05-jhE"/>
+                            <constraint firstItem="bNM-r9-VbG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UxR-Wj-OQe"/>
+                            <constraint firstItem="Ksj-XA-xSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qjY-Pw-5mn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AVJ-cH-sLJ" secondAttribute="bottom" id="sJw-kP-H1M"/>
+                            <constraint firstItem="AVJ-cH-sLJ" firstAttribute="top" secondItem="gNo-P6-tBW" secondAttribute="bottom" constant="219" id="z5I-DL-1fT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="botTextField" destination="Ksj-XA-xSN" id="gmz-Gj-5vD"/>
+                        <outlet property="camButton" destination="HI0-tu-Yq4" id="ikH-ae-v3V"/>
                         <outlet property="imagePicked" destination="gNo-P6-tBW" id="Uxj-uW-ops"/>
+                        <outlet property="topTextField" destination="bNM-r9-VbG" id="MNA-6o-RQJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="camButton" width="40" height="40"/>
+    </resources>
 </document>
