@@ -12,6 +12,8 @@ class StartViewController: UIViewController {
     var myMove:String!
     var opMove:String!
     
+    var history = [matches]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -67,6 +69,7 @@ class StartViewController: UIViewController {
             }
             
         }
+        history.append(matches(won:controller.won, myMove: myMove, opMove: opMove))
         
     }
     
@@ -108,6 +111,16 @@ class StartViewController: UIViewController {
         
         //Present the view controller
         presentViewController(controller, animated: true, completion: nil)
+    }
+    @IBAction func showHistory(sender: AnyObject) {
+        var controller: HistoryViewController
+        
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("HistoryViewController") as! HistoryViewController
+        controller.history = self.history
+        
+        //Present the view controller
+        presentViewController(controller, animated: true, completion: nil)
+
     }
     
     override func didReceiveMemoryWarning() {

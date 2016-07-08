@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CE03C551D30452A00E67B7D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE03C541D30452A00E67B7D /* HistoryViewController.swift */; };
+		7CE03C571D304B8300E67B7D /* matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE03C561D304B8300E67B7D /* matches.swift */; };
 		BD2392751D2867370072A0FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2392741D2867370072A0FB /* AppDelegate.swift */; };
 		BD2392771D2867370072A0FB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2392761D2867370072A0FB /* StartViewController.swift */; };
 		BD23927A1D2867370072A0FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2392781D2867370072A0FB /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7CE03C541D30452A00E67B7D /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		7CE03C561D304B8300E67B7D /* matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matches.swift; sourceTree = "<group>"; };
 		BD2392711D2867370072A0FB /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2392741D2867370072A0FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD2392761D2867370072A0FB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				BD23927D1D2867370072A0FB /* LaunchScreen.storyboard */,
 				BD2392801D2867370072A0FB /* Info.plist */,
 				BD2392A21D28684C0072A0FB /* ResultViewController.swift */,
+				7CE03C541D30452A00E67B7D /* HistoryViewController.swift */,
+				7CE03C561D304B8300E67B7D /* matches.swift */,
 			);
 			path = Roshambo;
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 				BD2392771D2867370072A0FB /* StartViewController.swift in Sources */,
 				BD2392751D2867370072A0FB /* AppDelegate.swift in Sources */,
 				BD2392A31D28684C0072A0FB /* ResultViewController.swift in Sources */,
+				7CE03C551D30452A00E67B7D /* HistoryViewController.swift in Sources */,
+				7CE03C571D304B8300E67B7D /* matches.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +496,7 @@
 				BD23929B1D2867370072A0FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD23929C1D2867370072A0FB /* Build configuration list for PBXNativeTarget "RoshamboTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +505,7 @@
 				BD23929E1D2867370072A0FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD23929F1D2867370072A0FB /* Build configuration list for PBXNativeTarget "RoshamboUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +514,7 @@
 				BD2392A11D2867370072A0FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
